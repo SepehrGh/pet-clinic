@@ -31,6 +31,7 @@ public class PetService {
 
 	public Pet newPet(Owner owner) {
 		log.info("add pet for owner {}", owner.getId());
+		System.out.println("IN PetService.newPet");
 		Pet pet = new Pet();
 		owner.addPet(pet);
 		return pet;
