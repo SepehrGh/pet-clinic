@@ -169,6 +169,16 @@
       <version>4.5.12</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <artifactId>joda-time</artifactId>
+      <groupId>joda-time</groupId>
+      <version>2.10.5</version>
+    </dependency>
+    <dependency>
+      <artifactId>hibernate-core</artifactId>
+      <groupId>org.hibernate</groupId>
+      <version>5.3.10.Final</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -248,13 +258,22 @@
         <version>${pitest.version}</version>
         <configuration>
           <targetClasses>
-            <param>org.springframework.samples.petclinic.owner.VisitController</param>
+            <param>org.springframework.samples.petclinic.utility.PriceCalculator</param>
           </targetClasses>
           <targetTests>
-            <param>org.springframework.samples.petclinic.owner.VisitControllerTests</param>
+            <param>org.springframework.samples.petclinic.utility.PriceCalculatorTest</param>
           </targetTests>
           <mutators>
-            <mutator>ROR</mutator>
+            <mutator>INVERT_NEGS</mutator>
+            <mutator>NEGATE_CONDITIONALS</mutator>
+            <mutator>REMOVE_CONDITIONALS</mutator>
+            <mutator>UOI</mutator>
+            <mutator>AOD</mutator>
+            <mutator>TRUE_RETURNS</mutator>
+            <mutator>FALSE_RETURNS</mutator>
+            <mutator>EMPTY_RETURNS</mutator>
+            <mutator>ROR5</mutator>
+            <mutator>NULL_RETURNS</mutator>
           </mutators>
         </configuration>
         <dependencies>

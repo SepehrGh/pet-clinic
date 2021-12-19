@@ -1,13 +1,12 @@
 package org.springframework.samples.petclinic.utility;
 
-import java.time.LocalDate;
-
 import static java.time.temporal.ChronoUnit.DAYS;
 import static java.time.temporal.ChronoUnit.YEARS;
 
 import org.springframework.samples.petclinic.owner.Pet;
 import org.springframework.samples.petclinic.visit.Visit;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
